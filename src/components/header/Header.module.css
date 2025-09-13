@@ -32,3 +32,9 @@
     padding: 0;
     margin: 0;
 }
+
+.cartLink{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
