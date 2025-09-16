@@ -1,7 +1,8 @@
 import { Routes, Route, Link } from "react-router-dom";
 import { ShoppingCart } from "lucide-react";
 import styles from "./Header.module.css";
-import CartPage from "../cartPage/CartPage";
+import CartPage from "../../pages/cartPage/CartPage";
+import Index from "../../pages/indexPage/Index";
 
 const Header = () => {
   return (
@@ -15,7 +16,8 @@ const Header = () => {
         </Link>
       </header>
         <Routes>
-            <Route path="/cart" element={<CartPage />} />
+          <Route path="/" element={<Index />} index />
+            <Route path="/cart" element={<CartPage />} /> 
         </Routes>
     </div>
 
