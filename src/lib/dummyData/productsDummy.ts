@@ -6,6 +6,9 @@ const productsDummy = [
     image: 'leaveIn.png',
     inStock: true,
     isLiked: false,
+    productSize: 'large',
+    productColor: 'black'
+
   },
     {
     id: '2',
@@ -14,6 +17,8 @@ const productsDummy = [
     image: 'shampoo.png',
     inStock: true,
     isLiked: true,
+    productSize: 'medium',
+    productColor: 'black'
     },
     {
     id: '3',
@@ -22,6 +27,8 @@ const productsDummy = [
     image: 'hairMask.png',
     inStock: false,
     isLiked: false,
+    productSize: '3x',
+    productColor: 'blue'
     },
     {
     id: '4',
@@ -30,6 +37,8 @@ const productsDummy = [
     image: 'conditioner.png',
     inStock: true,
     isLiked: true,
+    productSize: '5x',
+    productColor: 'black'
     },
 ];
 
