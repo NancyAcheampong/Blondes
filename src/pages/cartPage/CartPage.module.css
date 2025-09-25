@@ -1,8 +1,4 @@
-.cartPage{
-    font-size: 1.875rem; 
-  font-weight: bold;
-  /* text-decoration: underline; */
-}
+
 .cartContent{
     display: flex;
     flex-direction: row;

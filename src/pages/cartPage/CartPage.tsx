@@ -3,40 +3,40 @@ import CartItem, { type CartItems } from "../../components/cartItem/CartItem";
 // import cartDummy from "../../lib/dummyData/cartDummy";
 import CartContainer from "../../components/cartContainer/CartContainer";
 import CheckoutSummary from "../../components/checkoutSummary/CheckoutSummary";
-
-
+import HeadLiner from "../../components/headLiner/HeadLiner";
 
 type CartProps = {
   cart: CartItems[];
   onRemoveFromCart: (index: number) => void;
   onIncreaseQuantity: (index: number) => void;
   onDecreaseQuantity: (index: number) => void;
+  onClearCart: () => void;
 };
 
 const CartPage = ({
   onIncreaseQuantity,
   onRemoveFromCart,
   onDecreaseQuantity,
-  cart
+  cart,
+  onClearCart,
 }: CartProps) => {
+  console.log(cart);
   return (
-    <div className={styles.cartPage}>
-      Check What's in my cart
+    <div>
+      <HeadLiner onClearCart={() => onClearCart()} />
       <div className={styles.cartContent}>
         <CartContainer>
           {cart.map((item, index) => (
             <CartItem
-            key={item.product.id}
+              key={item.product.id}
               product={item.product}
               quantity={item.quantity}
-              onIncreaseQuantity={
-                () =>onIncreaseQuantity(index)
-              }
+              onIncreaseQuantity={() => onIncreaseQuantity(index)}
               onDecreaseQuantity={() => {
-                onDecreaseQuantity(index)
+                onDecreaseQuantity(index);
               }}
               onRemoveFromCart={() => {
-                onRemoveFromCart(index)
+                onRemoveFromCart(index);
               }}
             />
           ))}
