@@ -6,7 +6,7 @@ import { useState } from "react";
 import Index from "./pages/indexPage/Index";
 import CartPage from "./pages/cartPage/CartPage";
 import NavigationBar from "./components/navigationbar/NavigationBar";
-import HeadLiner from "./components/headLiner/HeadLiner";
+
 // import CartItem from "./components/cartItem/CartItem";
 
 function App() {
@@ -105,7 +105,7 @@ function App() {
           path="/cart"
           element={
             <CartPage
-            onClearCart={onClearCart}
+              onClearCart={onClearCart}
               onIncreaseQuantity={onIncreaseQuantity}
               onRemoveFromCart={onRemoveFromCart}
               onDecreaseQuantity={onDecreaseQuantity}
